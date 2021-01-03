@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/api', rutasApi);
 
-app.set('puerto', 3000);     //Se asigna el valor del puerto a 3000
+app.set('puerto', process.env.PORT || 3000);     //Se pide al sistema que asigne un puerto o se toma el 3000 si está disponible
 
 app.listen(app.get('puerto'), ()=>{          //Se crea el servidor host en el puerto 3000. app.get('puerto') devuelve un 3000
     console.log('servidor montado');     //Se envía un mensaje por consola para verificar que está montado
