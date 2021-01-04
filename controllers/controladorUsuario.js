@@ -25,8 +25,8 @@ exports.login = async(req, res, next) =>{   //Metodo para la petición login
                         );
                         res.status(200).send({      //Estatus 200 = autenticación exitosa
                             auth: true,
-                            tokenReturn: token,
-                            user: usuarioActual
+                            tokenReturn: token      //En la respuesta se envía el token
+                          //  user: usuarioActual   //y los datos de usuarios
                         })
                     }  //del if
                 else{
